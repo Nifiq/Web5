@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="style.css">
   <title>Калькулятор стоимости заказа</title>
@@ -14,7 +14,8 @@
     <form id="order-form" novalidate>
       <div class="form-row">
         <label for="product">Выберите товар</label>
-        <select id="product" name="product" required aria-required="true">
+        <select id="product" name="product" required>
+          <option value="" disabled selected>-- Выберите товар --</option>
           <option value="5" data-name="Жвачка">Жвачка — 5 ₽</option>
           <option value="50" data-name="Ручка">Ручка — 50 ₽</option>
           <option value="100" data-name="Книга">Книга — 100 ₽</option>
@@ -25,7 +26,7 @@
 
       <div class="form-row">
         <label for="quantity">Введите количество</label>
-        <input id="quantity" name="quantity" type="text" inputmode="numeric" autocomplete="off" />
+        <input id="quantity" name="quantity" type="text" inputmode="numeric" autocomplete="off">
         <div id="help-text">Целое положительное число (например: 1, 2, 5, 10).</div>
         <div id="error" role="alert" aria-live="polite"></div>
       </div>
